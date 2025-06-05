@@ -1,0 +1,31 @@
+#COURSE;Java
+
+@QUIZ;60;QuizID=100
+
+1
+
+What is the output of 2+2?
+1,2,3,4
+Answer=4
+
+What is the size of int in Java?
+2,4,8,16
+Answer=2
+
+Which keyword is used to inherit a class?
+super,extends,implements,this
+Answer=2
+
+0
+
+#COURSE;Algebra
+
+@QUIZ;40;QuizID=101
+
+2
+What is 5x5?
+10,15,25,30
+Answer=2
+0
+
+#COURSE;linear

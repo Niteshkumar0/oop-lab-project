@@ -1,0 +1,18 @@
+Student ID: 1
+Course: Java
+Quiz ID: 100
+Date: 2025-06-05T12:28:54.466635
+Attempted: 3
+Correct: 0
+Score: 0%
+
+----------------------------------------
+Student ID: 0
+Course: Java
+Quiz ID: 100
+Date: 2025-06-05T12:29:36.309173
+Attempted: 3
+Correct: 1
+Score: 33%
+
+----------------------------------------
