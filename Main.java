@@ -4,6 +4,7 @@ import java.io.*;
 import java.lang.*;
 import login.*;
 import student.*;
+import teacher.*;
 
 public class Main {
 
@@ -14,15 +15,17 @@ public class Main {
 // <--------------------     LOGIN CODE HERE    ---------------------------------->
         //    TEACHER LOGIN SECTION
         if (option == 1) {
-            TeacherLogin teacher = new TeacherLogin();
-            teacher.detail();
-            int checkingTeacher = teacher.checking();
+            TeacherLogin teacherlogin = new TeacherLogin();
+            teacherlogin.detail();
+            int checkingTeacher = teacherlogin.checking();
             if (checkingTeacher == 1) {
-                System.out.println("Teacher is valid account");
+               Teacher teacher = new Teacher();
+               teacher.welcome(teacherlogin.username);
             } else {
                 System.out.println("Teacher is invalid account");
             }
-        } // STUDENT LOGIN SECTION
+        }
+         // STUDENT LOGIN SECTION
         else if (option == 2) {
             StudentLogin studentLogin = new StudentLogin();
             studentLogin.detail();
@@ -30,11 +33,11 @@ public class Main {
             if (check == 1) {
                 Student student1 = new Student();
                 student1.welcome(studentLogin.studentId);
-                // student1.attemptQuiz();
             } else if (check == 0) {
                 System.out.println("student is invalid!");
             }
-        } else if (option == 3) {
+        }
+         else if (option == 3) {
             Course course = new Course();
             course.CourseOfferingList();
         }

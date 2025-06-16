@@ -1,4 +1,4 @@
-#COURSE;Java
+#COURSE;oop theory
 
 @QUIZ;60;QuizID=100
 
@@ -28,4 +28,3 @@ What is 5x5?
 Answer=2
 0
 
-#COURSE;linear

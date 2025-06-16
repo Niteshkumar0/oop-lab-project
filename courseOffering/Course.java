@@ -5,6 +5,8 @@ public class Course {
 
     public void CourseOfferingList(){
         File file = new File("courseOffering.txt");
+        System.out.println("");
+        System.out.println("");
 
         {
             try {
@@ -17,6 +19,8 @@ public class Course {
                         System.out.println("      instructor name : "+splitData[2]);
                         System.out.println("      credit hour : "+splitData[3]);
                 }
+                System.out.println("");
+                System.out.println("");
             } catch (FileNotFoundException e) {
                 throw new RuntimeException(e);
             }

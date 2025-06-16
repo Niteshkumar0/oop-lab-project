@@ -1,2 +1,3 @@
-junaid,12345
-sumaira,12345
+junaid,12345,oop theory
+sumaira,12345,oop lab
+usama,12345,Algebra

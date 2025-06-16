@@ -61,17 +61,13 @@ public class Student {
                 if (!quizStarted) {
                     if (line.startsWith("@QUIZ;") && line.contains("QuizID=")) {
                         quizId = line.substring(line.indexOf("QuizID=") + 7).trim();
-                    }else{
-                        System.out.println("no quiz");
-                        break;
                     }
-
                     if (line.equals(String.valueOf(courseChoice))) {
                         quizStarted = true;
 
-                        // ✅ Check if already attempted
                         if (hasStudentAttemptedQuiz(studentId, quizId)) {
                             System.out.println("⚠ You have already taken this quiz (Quiz ID: " + quizId + ").");
+                            read.close();
                             return 0;
                         }
                     }
@@ -170,7 +166,7 @@ public class Student {
                 System.out.println("Correct Answers:          " + correctAnswers);
                 System.out.printf("Your Score:               %d%%%n", (correctAnswers * 100 / totalQuestions));
             } else {
-                System.out.println("No questions found for course " + courseChoice + ".");
+                System.out.println("No Quiz found for course " + courseChoice + ".");
             }
 
         } catch (FileNotFoundException e) {
@@ -259,7 +255,12 @@ public class Student {
                     updatedContent.append("Date: ").append(timestamp).append("\n");
                     updatedContent.append("Attempted: ").append(totalQuestions).append("\n");
                     updatedContent.append("Correct: ").append(correctAnswers).append("\n");
-                    updatedContent.append("Score: ").append((correctAnswers * 100 / totalQuestions)).append("%\n\n");
+
+                    int scorePercent = 0;
+                    if (totalQuestions > 0) {
+                        scorePercent = (correctAnswers * 100 / totalQuestions);
+                    }
+                    updatedContent.append("Score: ").append(scorePercent).append("%\n\n");
                 }
             }
 
@@ -270,7 +271,12 @@ public class Student {
                 updatedContent.append("Date: ").append(timestamp).append("\n");
                 updatedContent.append("Attempted: ").append(totalQuestions).append("\n");
                 updatedContent.append("Correct: ").append(correctAnswers).append("\n");
-                updatedContent.append("Score: ").append((correctAnswers * 100 / totalQuestions)).append("%\n\n");
+
+                int scorePercent = 0;
+                if (totalQuestions > 0) {
+                    scorePercent = (correctAnswers * 100 / totalQuestions);
+                }
+                updatedContent.append("Score: ").append(scorePercent).append("%\n\n");
                 updatedContent.append("----------------------------------------\n");
             }
 

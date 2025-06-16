@@ -3,10 +3,10 @@ import java.io.*;
 import java.util.Scanner;
 public class TeacherLogin {
     Scanner input = new Scanner(System.in);
-    String username;
+    public String username;
     private int pass;
     public void detail(){
-        System.out.println(" =============== Welcome to Teacher portal =============== ");
+        System.out.println(" =============== Login to Teacher portal =============== ");
         System.out.println("username : ");
         username = input.next();
         System.out.println("password : ");

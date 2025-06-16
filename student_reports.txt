@@ -1,16 +1,23 @@
 Student ID: 1
 Course: Java
 Quiz ID: 100
-Date: 2025-06-05T12:28:54.466635
+Date: 2025-06-05T12:51:09.994817
 Attempted: 3
+Correct: 2
+Score: 66%
+
+----------------------------------------
+Student ID: cs241023
+Course: Algebra
+Quiz ID: 101
+Date: 2025-06-15T14:15:55.012249
+Attempted: 1
 Correct: 0
 Score: 0%
 
-----------------------------------------
-Student ID: 0
 Course: Java
 Quiz ID: 100
-Date: 2025-06-05T12:29:36.309173
+Date: 2025-06-15T14:16:51.387920
 Attempted: 3
 Correct: 1
 Score: 33%
